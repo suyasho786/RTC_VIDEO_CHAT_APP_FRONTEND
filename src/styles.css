@@ -14,3 +14,61 @@ body {
     margin: 0;
     padding: 0;
 }
+.container {
+  width: 600px;
+  margin: 35px 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 80%;
+  }
+}
+
+
+.gridContainer {
+
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .gridContainer {
+    flex-direction: row;
+    
+  }
+}
+
+.margin {
+  margin-top: 20px;
+}
+
+.padding {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;  */
+  
+  padding: 20px;
+}
+
+.paper {
+  
+  padding: 10px 20px;
+  border: 2px solid black;
+}
+.container {
+  display: flex;
+  justify-content: center; /* Center the container horizontally */
+  align-items: center; /* Center the container vertically */
+  height: 100vh; /* Optional: Set height to fill the viewport */
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the form horizontally */
+}
+
+

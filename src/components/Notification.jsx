@@ -1,10 +1,24 @@
-import React from "react"; 
-// import {Typography , AppBar} from "@mui/material"
-const Notification = ()=>{
-    return(
-        <div>
-            Notification
+import React, { useContext } from 'react';
+import { Button } from '@mui/material';
+
+import { SocketContext } from '../Context';
+
+const Notifications = () => {
+  const { answerCall, call, callAccepted } = useContext(SocketContext);
+
+  return (
+    <>
+      {call.isReceivingCall && !callAccepted && (
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <h1>{call.name} is calling:</h1>
+          <Button variant="contained" color="primary" onClick={answerCall}>
+            Answer
+          </Button>
         </div>
-    );
-}
-export default Notification;
+      )}
+    </>
+    
+  );
+};
+
+export default Notifications;
